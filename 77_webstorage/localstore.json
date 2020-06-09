@@ -1,0 +1,20 @@
+{
+  "index": 3,
+  "people": {
+    "0": {
+      "firstname": "Augusta",
+      "lastname": "Ada Byron",
+      "birthday": "1815-12-10"
+    },
+    "1": {
+      "firstname": "Alan",
+      "lastname": "Mathison Turing",
+      "birthday": "1912-06-23"
+    },
+    "2": {
+      "firstname": "John",
+      "lastname": "von Neumann",
+      "birthday": "1903-12-28"
+    }
+  }
+}

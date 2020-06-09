@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="utils.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h1>LocalStorage (ES5)</h1>
+    <p>Gracias a la propiedad LocalStorage de JavaScript podemos acceder al almacenamiento interno del navegador</p>
+    <p>Los datos guardados son persistentes al cierre de la página o del navegador</p>
+    <p>Aplicación serverless, todo se ejecuta en el cliente sin necesidad de servidor</p>
+    <p>Posibilidad de descargar y cargar la base de datos en un archivo JSON</p>
+    <p>Se ha desarrollado en JavaScript versión ECMAScript5 (2009) por termas de retrocompatibilidad:</p>
+    <ul>				
+        <li>Chrome 23</li>
+        <li>IE10/Edge</li>
+        <li>Firefox 21</li>
+        <li>Safari 6</li>
+        <li>Opera 15</li>
+    </ul>
+    <hr>
+    <div class="mb-20">
+        <input type="file" id="fileElem" accept=".json" style="display:none" onchange="app.handleFile(this)">
+        <button onclick="app.import()">Importar <i class="material-icons">&#xe2c6;</i></button>
+        <button onclick="app.export()">Exportar <i class="material-icons">&#xe2c4;</i> </button>
+    </div>
+    <div class="inputData mb-20">
+        <form action="javascript:void(0)">
+                <label for="firstname">Nombre</label>
+                <input type="text" name="firstname" id="firstname">
+                <br>
+                <label for="lastname">Apellidos</label>
+                <input type="text" name="lastname" id="lastname">
+                <br>
+                <label for="birthday">Fecha de Nacimiento</label>
+                <input type="date" name="birthday" id="birthday">
+                <br><br>
+                <button type="submit" id="submit">guardar <i class="material-icons">&#xe161;</i></button>
+                <div class="index"># <span id="index"></span></div>
+        </form>
+    </div>
+    <div class="showData mb-20">
+        <table>
+            <thead>
+                <tr>
+                    <th style="border:none">
+                        <!-- Delete -->
+                        <!-- Edit -->
+                    </th>
+                    <th>Índice</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Fecha de nacimiento</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>

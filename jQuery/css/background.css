@@ -1,0 +1,14 @@
+/*
+    El diseño del fondo no es definitivo
+*/
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color  : #e9e9e9;
+    background        : linear-gradient(135deg, #feffff 50%, #b9b9b9 100%);
+    /*background      : linear-gradient(135deg, #e9e9e9 0%, #feffff 50%);*/
+}

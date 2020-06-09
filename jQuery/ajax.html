@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax con jQuery</title>
+    <link rel="stylesheet" href="css/background.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/ajax.js"></script>
+
+    <style>
+        .caja {
+            width: 250px;
+            height: 250px;
+            border: 1px dashed black;
+            overflow: auto;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .caja>h2 {
+            margin: 0;
+            padding: 20px 0;
+            background-color: #436d70e6;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            left: 0;
+            box-shadow: 0 3px 20px -5px #444;
+        }
+
+        #get_datos {
+            margin-left: 10px;
+        }
+
+        input, button {
+            margin: 5px 0 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AJAX - jQuery</h1>
+
+    <div class="caja">
+        <h2>Load</h2>
+        <div id="load_datos"></div>
+    </div>
+    <div class="caja">
+        <h2>Get</h2>
+        <div id="get_datos"></div>
+    </div>
+    <div class="caja">
+        <h2>Post</h2>
+        <form action="https://reqres.in/api/users" id="form_post">
+            <input type="text" name="name" placeholder="Nombre">
+            <br>
+            <input type="text" name="web" placeholder="Web">
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+        <hr>
+        <div id="post_datos"></div>
+    </div>
+    <div class="caja">
+        <h2>Ajax</h2>
+        <div id="ajax_datos"></div>
+    </div>
+
+</body>
+
+</html>
