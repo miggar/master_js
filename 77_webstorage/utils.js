@@ -2,11 +2,11 @@
 //Utils
 
 /**
- * Update the data of obj1 with those of obj2 or add them if they do not exist
+ * Update the data of obj1 with those of obj2 
+ * (or add them if they do not exist)
  * Similar to Object.assign(obj1,obj2)
- * @param obj1
- * @param obj2
- * @returns
+ * @param {object} obj1
+ * @param {object} obj2
  */
 function mergeObject(obj1,obj2){
     for(var i in obj2){
@@ -21,7 +21,10 @@ function mergeObject(obj1,obj2){
     }
 }
 
-//Update object with up
+/**
+ * Update object with up
+ * @param {object} up
+ */
 Object.prototype.update = function(up){
     for(var i in up)
         (typeof up[i] !== "object")
@@ -31,16 +34,20 @@ Object.prototype.update = function(up){
                 : this[i].update(up[i]);
 }
 
-//String treatment: first letter in capital letters
+/**
+ * String treatment: first letter in capital letters
+ */
 String.prototype.sentence = function() {
 	if(this)
 		return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
 	return "";
 }
 
-//String treatment: every first letter in capital letters
+/**
+ * String treatment: every first letter in capital letters
+ * https://es.stackoverflow.com/questions/111241
+ */
 String.prototype.capitalice = function() {
-	//https://es.stackoverflow.com/questions/111241
 	if(this)
 		return (this.toLowerCase()).replace(
             /(^|[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ])([a-záéíóúüñ])/g, function(
@@ -83,7 +90,11 @@ function setProp(obj, key, value) {
         }, obj));
 };
 
-//Check that item is a JSON
+/**
+ * Check that item is a JSON
+ * @param   {string}    item
+ * @return  {boolean}
+ */
 function isJSON(item) {
     item = typeof item !== "string"
         ? JSON.stringify(item)
@@ -100,8 +111,7 @@ function isJSON(item) {
 
 /**
  * Enable or disable vertical page scroll
- * @param todo String {add,remove}
- * @returns
+ * @param   {string}    todo    'add', 'remove' or null
  */
 function toggleScrollY(todo) {
     var scroll = todo || "",
@@ -117,11 +127,15 @@ function toggleScrollY(todo) {
 	}
 }
 
-// When the string to be encoded contains characters outside of the Latin1 range
-// https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+/**
+ * When the string to be encoded contains characters outside of the Latin1 range
+ * https://developer.mozilla.org/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando
+ * @param   {string}    str
+ * @return  {string}
+ */
 function utf8_to_b64( str ) {
     return window.btoa(encodeURIComponent( str ));
-}  
+}
 function b64_to_utf8( str ) {
     return decodeURIComponent(window.atob( str ));
 }
@@ -129,6 +143,8 @@ function b64_to_utf8( str ) {
 /**
  * Download file without server
  * https://stackoverflow.com/questions/3665115/how-to-create-a-file-in-memory-for-user-to-download-but-not-through-server
+ * @param   {string}    filename
+ * @param   {string}    text
  */
 function download(filename, text) {
     var element = document.createElement('a');
@@ -141,11 +157,13 @@ function download(filename, text) {
     element.click();
   
     document.body.removeChild(element);
-  }
+}
 
 /**
  * Get the UTC date in the Locale String Format
  * https://stackoverflow.com/questions/55427168/is-there-a-function-to-get-the-utc-date-in-the-locale-string-format
+ * @param   {string}    locales
+ * @param   {object}    options
  */
 Date.prototype.toLocaleUTCDateString = function ( locales, options) {
     var timeDiff = seconDiff = adjustedDate = 0;
