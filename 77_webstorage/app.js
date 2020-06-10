@@ -70,7 +70,7 @@ var app = app || (function() {
         var file = element.files[0];
         element.value = "";
         if( file.type !== "application/json")
-            return alert('No es una archivo JSON válido');
+            return alert('No es un archivo JSON válido');
         var opcion = confirm("Al aceptar se sobrescribirán los datos de la aplicación");
         if (opcion !== true)
             return;
