@@ -1,5 +1,5 @@
 
-//Utils
+// Utils v=1593034470004
 
 /**
  * Update the data of obj1 with those of obj2 
@@ -173,4 +173,21 @@ Date.prototype.toLocaleUTCDateString = function ( locales, options) {
     timeDiff = this.getTimezoneOffset() * 60000;
     adjustedDate = new Date(this.valueOf() + timeDiff + seconDiff);
     return adjustedDate.toLocaleDateString(locales, options);
+}
+
+/**
+ * Remove item from array (mutable)
+ * https://www.etnassoft.com/2016/09/09/eliminar-un-elemento-de-un-array-en-javascript-metodos-mutables-e-inmutables
+ */
+Array.prototype.removeItemMutable = function(item) {
+    var i = this.indexOf( item );
+    return !!(i !== -1 && this.splice( i, 1 ));
+}
+
+/**
+ * Remove item from array (immutable)
+ * https://www.etnassoft.com/2016/09/09/eliminar-un-elemento-de-un-array-en-javascript-metodos-mutables-e-inmutables
+ */
+Array.prototype.removeItemImmutable = function(item) {
+    return this.filter( e => e !== item );
 }
