@@ -122,7 +122,14 @@ body {
     text-align: center;
     line-height: 10px;
     color: #333;
+    background-color: #ccc;
 }
+
+#sidebar h4 span {
+    padding: 5px;
+    background-color: white;
+}
+
 
 #sidebar img {
     width: 100%;
@@ -132,4 +139,42 @@ body {
 #sidebar p {
     font-size: 15px;
     text-align: justify;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    padding: 5px;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #eee;
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+}
+
+footer {
+    font-family: Helvetica, Arial;
+    color: white;
+    height: 47px;
+    background-color: rgba(51, 51, 51, .7);
+    margin: 0 auto;
+    width: 65%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    line-height: 47px;
+
+}
+
+.bx-wrapper img {
+    width: inherit;
+    height: max-content;
 }
