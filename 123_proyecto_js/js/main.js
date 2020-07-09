@@ -110,4 +110,39 @@ $(document).ready(function () {
         $('#acordeon').accordion();
     }
 
+    // Reloj
+    if(location.href.indexOf('reloj.html') !== -1) {
+        var reloj = $('#reloj');
+        reloj.html( moment().format("hh:mm:ss") );
+
+        setInterval(function(){
+            reloj.html( moment().format("hh:mm:ss") );
+        }, 1000);
+    }
+
+    // Reloj
+    if(location.href.indexOf('contacto.html') !== -1) {
+        /*
+        $("#form_contact").validate({
+            rules: {
+                name: "required",
+                surname: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                date: {
+
+                }
+            },
+            messages: {
+                name: "• Por favor introduzca su nombre",
+                surname: "• Por favor introduzca sus apellidos"
+            },
+            submitHandler: function(form) {
+                form.submit();
+            }
+        });*/
+    }
+
 });
