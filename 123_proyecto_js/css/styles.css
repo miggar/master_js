@@ -9,26 +9,24 @@
     clear: both;
 }
 
-body {
+/* body {
     background: url(../img/background.jpg);
     background-attachment: fixed;
-}
+} */
 
 #global {
     width: 65%;
     margin: 0 auto;
     margin-top: 30px;
-    background-color: white;
     padding: 20px;
-    box-shadow: 0 0 20px grey;
+    /* background-color: white;
+    box-shadow: 0 0 20px grey; */
 }
 
 #logo {
     font-family: Verdana, Arial;
     font-size: 30px;
     letter-spacing: 4px;
-    background-color: #235E3D;
-    color: white;
     text-align: center;
     width: 385px;
     height: 80px;
@@ -36,14 +34,16 @@ body {
     line-height: 75px;
     float: left;
     text-transform: uppercase;
+    /* background-color: #235E3D;
+    color: white; */
 }
 
 #menu {
     font-family: Helvetica, Arial;
-    background-color: #333;
     width: 100%;
     text-transform: uppercase;
     margin-bottom: 20px;
+    /* background-color: #333; */
 }
 
 #menu ul {
@@ -57,16 +57,16 @@ body {
     transition: all 300ms;
 }
 
-#menu ul li:hover {
+/* #menu ul li:hover {
     background-color: #235E3D;
-}
+} */
 
 #menu a {
     display: block;
-    color: white;
     text-decoration: none;
     padding-left: 30px;
     padding-right: 30px;
+    /* color: white; */
 }
 
 #post {
@@ -79,15 +79,16 @@ body {
     padding: 7px;
 }
 
-.post h2 {
+h2 {
+    font-family: Helvetica, Arial;
     font-size: 30px;
     color: #333;
 }
 
 .post .date {
     display: block;
-    color: gray;
     margin-top: 5px;
+    /* color: gray; */
 }
 
 .post p {
@@ -103,11 +104,11 @@ body {
     display: block;
     width: 70px;
     padding: 15px;
-    background-color: #235E3D;
-    color: white;
     text-decoration: none;
     margin-top: 10px;
     margin-bottom: 20px;
+    /* background-color: #235E3D;
+    color: white; */
 }
 
 #sidebar {
@@ -121,19 +122,18 @@ body {
     margin-bottom: 20px;
     text-align: center;
     line-height: 10px;
-    color: #333;
-    background-color: #ccc;
+    /* color: #333;
+    background-color: #ccc; */
 }
 
 #sidebar h4 span {
     padding: 5px;
-    background-color: white;
+    /* background-color: white; */
 }
-
 
 #sidebar img {
     width: 100%;
-    border: 1px solid #eee;
+    /* border: 1px solid #eee; */
 }
 
 #sidebar p {
@@ -146,35 +146,82 @@ form input[type="password"],
 form input[type="email"] {
     padding: 5px;
     border-radius: 1px;
-    border: 1px solid #ccc;
     width: 80%;
     margin-bottom: 10px;
     margin-top: 5px;
+    /* border: 1px solid #ccc; */
 }
 
 form input[type="submit"] {
-    background-color: #eee;
     padding: 10px;
-    border: 1px solid #ccc;
-    color: #333;
     cursor: pointer;
+    /* background-color: #eee;
+    border: 1px solid #ccc;
+    color: #333; */
 }
 
 footer {
     font-family: Helvetica, Arial;
-    color: white;
     height: 47px;
-    background-color: rgba(51, 51, 51, .7);
     margin: 0 auto;
     width: 65%;
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 50px;
     line-height: 47px;
-
+    /* color: white;
+    background-color: rgba(51, 51, 51, .7); */
 }
 
 .bx-wrapper img {
     width: inherit;
     height: max-content;
 }
+
+#selector-theme {
+    position: fixed;
+    top: 40%;
+    background-color: rgba(51, 51, 51, 0.5);
+    width: 50px;
+    height: 100px;
+ }
+
+ #to-green,
+ #to-blue,
+ #to-red {
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    display: block;
+    margin: 5px auto 5px auto;
+    cursor: pointer;
+ }
+
+ #to-green {
+    background-color: #235E3D;
+ }
+
+ #to-blue {
+    background-color: #1F87C4;
+ }
+
+ #to-red {
+    background-color: #CA3413;
+ }
+
+ .subir {
+     color: white;
+     text-decoration: none;
+     display: block;
+     float: right;
+ }
+
+ #box {
+     width: 60%;
+     float: left;
+     margin-top: 40px;
+ }
+
+ #acordeon {
+     margin-top: 20px;
+ }

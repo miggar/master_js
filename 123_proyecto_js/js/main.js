@@ -1,11 +1,13 @@
 $(document).ready(function () {
 
     // Slider
-    $('.bxslider').bxSlider({
-        mode: 'fade',
-        captions: true,
-        slideWidth: 1200
-    });
+    if(location.href.indexOf('index.html') !== -1) {
+        $('.bxslider').bxSlider({
+            mode: 'fade',
+            captions: true,
+            slideWidth: 1200
+        });
+    }
 
     // Posts
     var posts = [
@@ -55,5 +57,57 @@ $(document).ready(function () {
             </article>`;
         $("#post").append(post);
     });
+
+    // Selector de tema
+    var theme = $("#theme");
+    
+    $("#to-green").click(function(){
+        theme.attr("href","css/green.css")
+    });
+
+    $("#to-blue").click(function(){
+        theme.attr("href","css/blue.css")
+    });
+
+    $("#to-red").click(function(){
+        theme.attr("href","css/red.css")
+    });
+
+    // Scroll arriba de la web
+    $(".subir").click(function(e){
+        e.preventDefault(); // el link no redirige
+        $("html, body").animate({
+            scrollTop: 0 
+        }, 500);
+
+        return false;
+    });
+
+    // Login falso
+    $("#login form").submit(function(){
+        var form_name = $("#form_name").val();
+
+        localStorage.setItem("form_name", form_name);
+    });
+
+    var form_name = localStorage.getItem("form_name");
+
+    if(form_name != null && form_name != "undefined") {
+        var about_parrafo = $("#about p");
+
+        about_parrafo.html("<br />Bienvenido, <strong>" + form_name + "</strong>");
+        about_parrafo.append('<br /><a href="#" id="logout">Cerrar sesión</a>');
+        $("#login").hide();
+
+        $("#logout").click(function(){
+            localStorage.clear();
+            location.reload();
+        })
+    }
+
+    // Acordeon
+    if(location.href.indexOf('about.html') !== -1) {
+        $('#acordeon').accordion();
+    }
 
 });

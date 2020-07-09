@@ -1,0 +1,72 @@
+body {
+    background             : url(../img/background-green.jpg) no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
+}
+
+#global {
+    background-color: white;
+    box-shadow      : 0 0 20px grey;
+}
+
+#logo {
+    background-color: #235E3D;
+    color           : white;
+}
+
+#menu {
+    background-color: #333;
+}
+
+#menu ul li:hover {
+    background-color: #235E3D;
+}
+
+#menu a {
+    color: white;
+}
+
+.post h2 {
+    color: #333;
+}
+
+.post .date {
+    color: gray;
+}
+
+.button-more {
+    background-color: #235E3D;
+    color           : white;
+}
+
+#sidebar h4 {
+    color           : #333;
+    background-color: #ccc;
+}
+
+#sidebar h4 span {
+    background-color: white;
+}
+
+#sidebar img {
+    border: 1px solid #eee;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background-color: #eee;
+    border          : 1px solid #ccc;
+    color           : #333;
+}
+
+footer {
+    color           : white;
+    background-color: rgba(51, 51, 51, .7);
+}
