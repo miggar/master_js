@@ -122,7 +122,10 @@ $(document).ready(function () {
 
     // Reloj
     if(location.href.indexOf('contacto.html') !== -1) {
-        /*
+        $("#form_contact input[name='date']").datepicker({
+            dateFormat: 'dd/mm/yy'
+        });
+
         $("#form_contact").validate({
             rules: {
                 name: "required",
@@ -132,17 +135,39 @@ $(document).ready(function () {
                     email: true
                 },
                 date: {
-
+                    required: true,
+                    regex: /^((0?[1-9])|([12][0-9])|(3[01]))[\-\/]((0?[1-9])|1[012])[\-\/]((19\d{2})|(20[0-5]\d))$/
+                },
+                years: {
+                    required: true,
+                    min: 0,
+                    max: 150
                 }
             },
             messages: {
-                name: "• Por favor introduzca su nombre",
-                surname: "• Por favor introduzca sus apellidos"
+                name: "• Por favor agregue su nombre",
+                surname: "• Por favor agregue sus apellidos",
+                email: "• Por favor agregue su correo",
+                date: "• Por favor agregue una fecha válida (dd/mm/aaaa)",
+                years: {
+                    required: "Por favor agregue su edad",
+                    min: "Debe tener una edad positiva",
+                    max: "No me creo que exceda de 150 años"
+                }
             },
             submitHandler: function(form) {
                 form.submit();
             }
-        });*/
+        });
+
+        $.validator.addMethod(
+            "regex",
+            function(value, element, regexp) {
+                var re = new RegExp(regexp);
+                return this.optional(element) || re.test(value);
+            },
+            "Please check your input."
+        );
     }
 
 });
