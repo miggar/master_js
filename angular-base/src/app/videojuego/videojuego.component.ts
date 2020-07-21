@@ -47,20 +47,20 @@ export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy {
   ngOnInit(): void {
     /* Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     Add 'implements OnInit' to the class. */
-    console.log('OnInit ejecutado');
+    // console.log('OnInit ejecutado');
   }
 
   ngDoCheck(): void {
     /* Called every time that the input properties of a component or a directive are checked.
     Use it to extend change detection by performing a custom check.
     Add 'implements DoCheck' to the class. */
-    console.log('DoCheck ejecutado');
+    // console.log('DoCheck ejecutado');
   }
 
   ngOnDestroy(): void {
     /* Called once, before the instance is destroyed.
     Add 'implements OnDestroy' to the class. */
-    console.log('OnDestroy ejecutado');
+    // console.log('OnDestroy ejecutado');
   }
 
 }

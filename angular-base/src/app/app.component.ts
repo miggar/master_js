@@ -9,7 +9,7 @@ import { Configuracion } from './models/configuracion';
 export class AppComponent {
   title: string; // = 'angular-base';
   mostrarVideojuegos: boolean; // = true;
-  config: object;
+  config: any;
 
   constructor(){
     this.config = Configuracion;
