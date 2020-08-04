@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Configuracion } from './models/configuracion';
+// import { Configuracion } from './models/configuracion';
 
 @Component({
   selector: 'app-root',
@@ -7,18 +7,18 @@ import { Configuracion } from './models/configuracion';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title: string; // = 'angular-base';
+/*   title: string; // = 'angular-base';
   mostrarVideojuegos: boolean; // = true;
-  config: any;
+  config: any; */
 
   constructor(){
-    this.config = Configuracion;
+/*  this.config = Configuracion;
     this.title = Configuracion.titulo;
-    this.mostrarVideojuegos = Configuracion.mostrarVideojuegos;
+    this.mostrarVideojuegos = Configuracion.mostrarVideojuegos; */
   }
 
-  ocultaVideojuegos(value: boolean): void {
+/*   ocultaVideojuegos(value: boolean): void {
     this.mostrarVideojuegos = value;
-  }
+  } */
 
 }
