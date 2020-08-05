@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
     <a routerLinkActive="active" routerLink="/zapatillas">zapatillas</a>
     <a routerLinkActive="active" routerLink="/videojuego">videojuego</a>
     <a routerLinkActive="active" routerLink="/cursos">cursos</a>
+    <a routerLinkActive="active" routerLink="/cursos/Jeremias/77">Jeremias77</a>
+    <a routerLinkActive="active" routerLink="/externo">externo</a>
   </nav>`,
   styles: [
     'nav a { margin-right: 10px }',

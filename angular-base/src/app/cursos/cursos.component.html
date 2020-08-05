@@ -1,1 +1,26 @@
-<p>cursos works!</p>
+<!-- <p>cursos works!</p> -->
+<h1>
+  Componente de cursos
+</h1>
+
+<!-- <div *ngIf="identificado; else noIdentificado">
+    <h3>Estás identificado en la aplicación</h3>
+    <button (click)="unsetIdentificado()">Borrar identificación</button>
+</div> -->
+
+<div *ngIf="identificado; then siIdentificado else noIdentificado"></div>
+
+<ng-template #siIdentificado>
+    <h3>Estás identificado en la aplicación</h3>
+    <button (click)="unsetIdentificado()">Borrar identificación</button>
+</ng-template>
+
+<ng-template #noIdentificado>
+    <p>No estás identificado, pulsa el siguiente botón</p>
+    <button (click)="setIdentificado()">Identificarse</button>
+</ng-template>
+
+<hr>
+<button (click)="redirigir()">Llévame a Zapatillas</button>
+<h3 *ngIf="nombre">Bienvenido {{ nombre }}</h3>
+<h3 *ngIf="followers">Tus seguidores son: {{ followers }}</h3>
