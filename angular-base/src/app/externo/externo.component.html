@@ -1,5 +1,64 @@
-<input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser()">
+<hr />
+<!-- Pipes -->
+{{ fecha | date: "fullDate" | uppercase }}
+<br />
+{{ fecha | date: "dd/MM/yy" }}
+<br />
+{{ "HOLA MUNDO, USANDO PIPES" | lowercase }}
+<br />
+{{ 4 | calculadora: 2 }}
+<hr />
+<input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser()" />
+<div *ngIf="!user">
+  <p>Cargando...</p>
+</div>
+
 <div *ngIf="user">
-    <img src="{{ user.avatar }}" alt="" width="200">
-    <h2> {{ user.first_name + ' ' + user.last_name}}</h2>
+  <img src="{{ user.avatar }}" alt="" width="200" />
+  <h2>{{ user.first_name + " " + user.last_name }}</h2>
+</div>
+
+<hr />
+
+<h2>Crear usuario</h2>
+
+<form #formUser="ngForm" (ngSubmit)="onSubmit(formUser)">
+  <p>
+    <label for="name">Nombre</label>
+    <input
+      type="text"
+      name="name"
+      #name="ngModel"
+      [(ngModel)]="newUser.name"
+      pattern="[a-zA-Z]+"
+      required
+    />
+    <span *ngIf="name.touched && !name.valid">
+        Valor inválido
+    </span>
+  </p>
+  <p>
+    <label for="job">Trabajo</label>
+    <input
+      type="text"
+      name="job"
+      #job="ngModel"
+      [(ngModel)]="newUser.job"
+      pattern="[a-zA-Z]+"
+      required
+    />
+    <span *ngIf="job.touched && !job.valid">
+        Valor inválido
+    </span>
+  </p>
+
+  <input
+    type="submit"
+    value="Guardar usuario"
+    [disabled]="!formUser.form.valid"
+  />
+</form>
+
+<div *ngIf="usuarioGuardado">
+    {{ usuarioGuardado | json }}
 </div>

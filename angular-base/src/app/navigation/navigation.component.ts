@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
     <a routerLinkActive="active" routerLink="/cursos">cursos</a>
     <a routerLinkActive="active" routerLink="/cursos/Jeremias/77">Jeremias77</a>
     <a routerLinkActive="active" routerLink="/externo">externo</a>
+    <a routerLinkActive="active" routerLink="/contacto">contacto</a>
   </nav>`,
   styles: [
     'nav a { margin-right: 10px }',
