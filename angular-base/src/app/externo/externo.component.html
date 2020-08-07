@@ -34,7 +34,7 @@
       required
     />
     <span *ngIf="name.touched && !name.valid">
-        Valor inválido
+      Valor inválido
     </span>
   </p>
   <p>
@@ -48,7 +48,7 @@
       required
     />
     <span *ngIf="job.touched && !job.valid">
-        Valor inválido
+      Valor inválido
     </span>
   </p>
 
@@ -60,5 +60,5 @@
 </form>
 
 <div *ngIf="usuarioGuardado">
-    {{ usuarioGuardado | json }}
+  <pre>{{ usuarioGuardado | json }}</pre>
 </div>
