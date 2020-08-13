@@ -1,3 +1,8 @@
+/**
+ * Ejemplo de aplicación de consola 
+ * Ejecutar con: node calculadora.js
+ */
+
 "use strict";
 
 var params = process.argv.slice(2);
