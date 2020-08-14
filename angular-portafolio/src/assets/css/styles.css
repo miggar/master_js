@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "yanone";
+  src: url("../fonts/YanoneKaffeesatz-Light.ttf");
+}
+
+@font-face {
+    font-family: "finger";
+    src: url("../fonts/FingerPaint-Regular.ttf");
+  }
+  @font-face {
+    font-family: "titillium";
+    src: url("../fonts/TitilliumWeb-Light.ttf");
+  }
+
+body {
+  font-family: "yanone", Arial, Helvetica;
+}
