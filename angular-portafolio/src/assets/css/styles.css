@@ -1,17 +1,236 @@
+/* Importar Fuentes Custom */
 @font-face {
   font-family: "yanone";
   src: url("../fonts/YanoneKaffeesatz-Light.ttf");
 }
 
 @font-face {
-    font-family: "finger";
-    src: url("../fonts/FingerPaint-Regular.ttf");
-  }
-  @font-face {
-    font-family: "titillium";
-    src: url("../fonts/TitilliumWeb-Light.ttf");
-  }
+  font-family: "finger";
+  src: url("../fonts/FingerPaint-Regular.ttf");
+}
+
+@font-face {
+  font-family: "titillium";
+  src: url("../fonts/TitilliumWeb-Light.ttf");
+}
+
+/* Generales */
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: "yanone", Arial, Helvetica;
+  font-size: 20px;
+  background: url("../img/pattern.png");
+  background-attachment: fixed;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+/* Barra de navegación || cabecera */
+header {
+  display: block;
+  width: 100%;
+  height: 90px;
+  background-color: rgba(53, 103, 164, 0.8);
+  position: fixed;
+  text-transform: uppercase;
+}
+
+header ul {
+  display: block;
+  width: fit-content;
+  height: inherit;
+  margin: 0 auto;
+  margin-top: -6px;
+}
+
+header ul li {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 90px;
+}
+
+header a {
+  display: block;
+  /*     padding-right: 20px;
+    padding-left: 20px; */
+  padding: 0 20px;
+  height: inherit;
+  text-decoration: none;
+  color: white;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+header a:hover,
+header a.active {
+  background-color: #000000cc;
+}
+
+/* Logotipo */
+#logo {
+  font-family: "finger";
+  font-size: 30px;
+}
+
+#logo a {
+  transition: color 500ms, transform 500ms;
+}
+
+#logo a:hover {
+  background-color: transparent;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* Contenedor principal */
+#content {
+  width: 80%;
+  min-height: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 40px black;
+  background-color: #ffffffb3;
+  padding-top: 120px;
+  border-left: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+}
+
+/* Footer */
+footer {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 15px;
+  color: #000000cc;
+}
+
+/* About */
+#title {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+#title h1 {
+  font-family: "finger";
+  font-size: 60px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+#title h2 {
+  font-size: 25px;
+  color: gray;
+  padding: 5px 0;
+}
+
+article.about {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.about h2 {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.about p {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: justify;
+}
+
+/* Sección con formulario */
+.container {
+  padding: 10px 50px;
+}
+
+.container h2 {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+form {
+  width: 85%;
+}
+
+form label {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+textarea {
+  width: 40%;
+  padding: 5px;
+}
+
+form button,
+form input[type="submit"] {
+  display: block;
+  font-size: 17px;
+  padding: 10px;
+  margin-top: 15px;
+  color: white;
+  background-color: rgb(53, 103, 164);
+  border: 1px solid rgb(13, 67, 133);
+  cursor: pointer;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+  background-color: rgb(91, 131, 180);
+}
+
+form button:disabled,
+form button[disabled]:hover,
+form input[type="submit"]:disabled,
+form input[type="submit"][disabled]:hover {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.form_error {
+  padding: 3px;
+  font-size: 13px;
+  background-color: red;
+  color: white;
+  margin-left: 5px;
+}
+
+.message {
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #eee;
+}
+
+.success {
+  background-color: green;
+  color:white
+}
+
+.success a {
+  color:white
+}
+
+.failed {
+  background-color: red;
+  color:white
 }
