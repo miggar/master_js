@@ -132,8 +132,8 @@ var controller = {
       if (/^(jpg|png|jpeg|gif)$/i.test(fileExt)) {
         Project.findByIdAndUpdate(
           projectId,
-          { new: true },
           { image: fileName },
+          { new: true },
           (err, projectUpdate) => {
             if (err)
               return res
