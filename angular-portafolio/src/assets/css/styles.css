@@ -94,7 +94,8 @@ header a.active {
 /* Contenedor principal */
 #content {
   width: 80%;
-  min-height: 500px;
+  min-height: 600px;
+  height: auto;
   margin: 0 auto;
   box-shadow: 0 0 40px black;
   background-color: #ffffffb3;
@@ -156,6 +157,17 @@ article.about {
   padding: 10px 50px;
 }
 
+.container .image,
+.container .data {
+  float: left;
+  width: 46%;
+  margin: 0 2%;
+}
+
+.container .image img {
+  width: 100%;
+}
+
 .container h2 {
   display: block;
   border-bottom: 1px solid #ccc;
@@ -183,7 +195,9 @@ textarea {
 }
 
 form button,
-form input[type="submit"] {
+form input[type="submit"],
+.button_edit,
+.button_delete {
   display: block;
   font-size: 17px;
   padding: 10px;
@@ -192,6 +206,24 @@ form input[type="submit"] {
   background-color: rgb(53, 103, 164);
   border: 1px solid rgb(13, 67, 133);
   cursor: pointer;
+}
+
+.button_edit,
+.button_delete {
+  width: 15%;
+  float: left;
+  margin: 10px 5%;
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+}
+
+.button_edit {
+  background-color: orangered;
+}
+
+.button_delete {
+  background-color: red;
 }
 
 form button:hover,
@@ -223,14 +255,39 @@ form input[type="submit"][disabled]:hover {
 
 .success {
   background-color: green;
-  color:white
+  color: white;
 }
 
 .success a {
-  color:white
+  color: white;
 }
 
 .failed {
   background-color: red;
-  color:white
+  color: white;
+}
+
+/* Página de proyectos*/
+.project {
+  list-style: none;
+  display: block;
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin: 10px 4%;
+}
+
+.project.image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project a {
+  text-decoration: none;
+  color: black;
 }

@@ -13,6 +13,7 @@ import { Global } from '../../services/global';
 export class CreateComponent implements OnInit {
   public title: string;
   public project: Project;
+  public saveProject: Project;
   public status: string;
   public filesToUpload: Array<File>;
 
@@ -53,7 +54,7 @@ export class CreateComponent implements OnInit {
             )
             .then((result: any) => {
               this.status = 'success';
-              // console.log(result);
+              this.saveProject = result.project;
               form.reset();
             });
         } else {
@@ -68,8 +69,6 @@ export class CreateComponent implements OnInit {
   }
 
   fileChangeEvent(fileInput: any): void {
-    // console.log(fileInput);
     this.filesToUpload = fileInput.target.files as Array<File>;
-    console.log(this.filesToUpload);
   }
 }
