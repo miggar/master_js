@@ -2,6 +2,7 @@
 
 var Project = require("../models/project");
 var fs = require("fs");
+var path = require("path");
 
 var controller = {
   home: function (req, res) {
@@ -155,6 +156,20 @@ var controller = {
       return res.status(200).send({
         message: fileName,
       });
+  },
+  getImageFile: function (req, res) {
+    const image = "./uploads/" + req.params.image;
+
+    fs.exists(image, (exists) => {
+      if (exists) {
+        return res.sendFile(path.resolve(image));
+      } else {
+        /* return res.sendFile(path.resolve("./uploads/No-image-available.png")); */
+        return res.status(200).send({
+          message: "No existe el archivo",
+        });
+      }
+    });
   },
 };
 
