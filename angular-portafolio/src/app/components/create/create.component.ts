@@ -3,6 +3,7 @@ import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { UploadService } from '../../services/upload.service';
 import { Global } from '../../services/global';
+import { scrollToTop } from '../../services/utils';
 
 @Component({
   selector: 'app-create',
@@ -42,7 +43,7 @@ export class CreateComponent implements OnInit {
     // Guardar datos
     this.projectService.saveProject(this.project).subscribe(
       response => {
-        console.log(response);
+        // console.log(response);
         if (response.project) {
           // Subir imagen
           this.uploadService
@@ -56,6 +57,7 @@ export class CreateComponent implements OnInit {
               this.status = 'success';
               this.saveProject = result.project;
               form.reset();
+              scrollToTop();
             });
         } else {
           this.status = 'failed';

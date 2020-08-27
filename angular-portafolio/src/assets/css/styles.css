@@ -216,10 +216,19 @@ form input[type="submit"],
   text-decoration: none;
   border: none;
   border-radius: 2px;
+  text-align: center;
+  opacity: .8;
+  font-size: larger;
+  min-width: fit-content;
+}
+
+.button_edit:hover,
+.button_delete:hover {
+  opacity: 1;
 }
 
 .button_edit {
-  background-color: orangered;
+  background-color: #5cb584;
 }
 
 .button_delete {
@@ -290,4 +299,10 @@ form input[type="submit"][disabled]:hover {
 .project a {
   text-decoration: none;
   color: black;
+}
+
+.confirm {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
 }
