@@ -1,9 +1,13 @@
 <div class="container">
-  <div class="galeria">
-    <div><img src="assets/img/coffee1.jpg" title="Funky roots" /></div>
-    <div>
-      <img src="assets/img/coffee2.jpg" title="The long and winding road" />
-    </div>
-    <div><img src="assets/img/coffee3.jpg" title="Happy trees" /></div>
+  <h1>Contacto</h1>
+
+  <input type="number" [(ngModel)]="widthSlider" />
+  <button (click)="loadSlider()">Cargar slider</button>
+  <button (click)="resetSlider()">Reiniciar slider</button>
+  <label for="caption">Caption</label>
+  <input type="checkbox" name="caption" [(ngModel)]="caption"/>
+
+  <div *ngIf="widthToSlider">
+    <app-slider [anchura]="widthToSlider" [etiquetas]="caption"></app-slider>
   </div>
 </div>
