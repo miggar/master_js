@@ -1,15 +1,32 @@
 <div class="container contact">
   <h1>Contacto</h1>
 
+  <div id="texto" #viewchild_texto>
+    <p appResaltado>
+      Esta es la página de contacto, puedes enviarnos cualquier duda.
+    </p>
+  </div>
+
   <input type="number" [(ngModel)]="widthSlider" />
   <button (click)="loadSlider()">Cargar slider</button>
   <button (click)="resetSlider()">Reiniciar slider</button>
   <div class="caption">
-      <label for="caption">Caption</label>
-      <input type="checkbox" name="caption" [(ngModel)]="caption" (change)="loadSlider()" />
+    <label for="caption">Caption</label>
+    <input
+      type="checkbox"
+      name="caption"
+      [(ngModel)]="caption"
+      (change)="loadSlider()"
+    />
   </div>
 
   <div *ngIf="widthToSlider">
-    <app-slider [anchura]="widthToSlider" [etiquetas]="caption"></app-slider>
+    <app-slider
+      [anchura]="widthToSlider"
+      [etiquetas]="caption"
+      (conseguirAutor)="getAuthor($event)"
+    ></app-slider>
   </div>
+
+  <div *ngIf="author">{{ author.nombre + "-" + author.website }}</div>
 </div>

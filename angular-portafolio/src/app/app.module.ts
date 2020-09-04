@@ -13,6 +13,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { ResaltadoDirective } from './directives/resaltado.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SliderComponent } from './components/slider/slider.component';
     DetailComponent,
     EditComponent,
     SliderComponent,
+    ResaltadoDirective,
   ],
   imports: [
     BrowserModule,
