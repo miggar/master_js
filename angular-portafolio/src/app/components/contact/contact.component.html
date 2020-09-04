@@ -1,11 +1,13 @@
-<div class="container">
+<div class="container contact">
   <h1>Contacto</h1>
 
   <input type="number" [(ngModel)]="widthSlider" />
   <button (click)="loadSlider()">Cargar slider</button>
   <button (click)="resetSlider()">Reiniciar slider</button>
-  <label for="caption">Caption</label>
-  <input type="checkbox" name="caption" [(ngModel)]="caption"/>
+  <div class="caption">
+      <label for="caption">Caption</label>
+      <input type="checkbox" name="caption" [(ngModel)]="caption" (change)="loadSlider()" />
+  </div>
 
   <div *ngIf="widthToSlider">
     <app-slider [anchura]="widthToSlider" [etiquetas]="caption"></app-slider>

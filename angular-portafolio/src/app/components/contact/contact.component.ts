@@ -18,7 +18,10 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {}
 
   loadSlider(): void {
-    this.widthToSlider = this.widthSlider;
+    this.resetSlider();
+    setTimeout(() => {
+      this.widthToSlider = this.widthSlider;
+    });
   }
 
   resetSlider(): void {

@@ -306,3 +306,21 @@ form input[type="submit"][disabled]:hover {
   font-weight: bold;
   margin-top: 10px;
 }
+
+/* Página de contacto*/
+.contact input,
+.contact button {
+  margin-right: 5px;
+  padding: 1px 5px;
+}
+
+.contact .caption {
+  display: inline-block;
+  background-color: #eee;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.contact .caption > label {
+  margin-right: 5px;
+}
