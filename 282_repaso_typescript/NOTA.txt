@@ -1,0 +1,6 @@
+ejecuta 
+    tsc --init
+        Esto creará tsconfig.json
+    tsc -p ./ -w
+        -p indica el path (en este caso el directorio actual './' )
+        -w se compila cada vez que se realizan cambios
